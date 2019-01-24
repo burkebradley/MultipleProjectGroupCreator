@@ -1,12 +1,15 @@
+import java.util.ArrayList;
 
 public class Student
 	{
 
 			private String name;
-			
-			public Student(String n)
+			private ArrayList<String> oldGroups;
+			public Student(String n, ArrayList<String> o)
 			{
 				name = n;
+				oldGroups = o;
+				
 			}
 
 			public String getName()
