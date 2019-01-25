@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 import javax.swing.plaf.synth.SynthSpinnerUI;
 
+import com.sun.org.apache.xpath.internal.operations.Number;
+
 public class GenerateGroups
 	{
 		static ArrayList<Student>namesList = new ArrayList<Student>();
@@ -14,12 +16,11 @@ public class GenerateGroups
 		static ArrayList<String>group4 = new ArrayList<String>();
 		static ArrayList<String>group5 = new ArrayList<String>();
 		static ArrayList<String>group6 = new ArrayList<String>();
-		static ArrayList<String>group7 = new ArrayList<String>();
-		static ArrayList<String>group8 = new ArrayList<String>();
-		static ArrayList<String>group9 = new ArrayList<String>();
-		static ArrayList<String>group10 = new ArrayList<String>();
-		static ArrayList<String>group11 = new ArrayList<String>();
-		static Scanner groupNum;
+		static Scanner userInput1;
+		static int groupNum;
+		static int numOfStudents = 1;
+		static int groupSize;
+		static int leftover;
 		
 		public static void makeNames() throws IOException
 			{
@@ -27,20 +28,26 @@ public class GenerateGroups
 				Scanner names = new Scanner(new File("studentnames.txt"));
 				while (names.hasNext())
 					{
-						ArrayList <String> fill = new ArrayList<String>();
-						namesList.add(new Student(names.nextLine(), fill));	
-					}
+						namesList.add(new Student(numOfStudents, names.nextLine()));
+						numOfStudents++;
+;					}
 				
 			}
+		public static void numOfGroups() throws IOException
+			{
+				System.out.println("How many groups?");
+				userInput1 = new Scanner(System.in);
+				groupNum = userInput1.nextInt();
+				makeGroups();
+
+			}
+		
 		public static void makeGroups() throws IOException
 			{
-				System.out.println("How many groups(1-11) do you want?");
-				groupNum = new Scanner(System.in);
-				for(int i = 0; i<namesList.size(); i++)
-					{
-						System.out.println(namesList.get(i).getName());
-						System.out.println(" ");
-					}
+				groupSize = namesList.size()/groupNum;
+				leftover = numOfStudents - (groupSize)
+				System.out.println(groupSize);
+			
 			}
 		
 		

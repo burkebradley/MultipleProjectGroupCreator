@@ -7,7 +7,7 @@ public class GroupRunner
 		public static void main(String[] args) throws IOException
 		{
 			GenerateGroups.makeNames();
-			GenerateGroups.makeGroups();
+			GenerateGroups.numOfGroups();
 		}
 		
 

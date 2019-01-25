@@ -1,16 +1,26 @@
-import java.util.ArrayList;
 
 public class Student
 	{
 
 			private String name;
-			private ArrayList<String> oldGroups;
-			public Student(String n, ArrayList<String> o)
+			private int studentNum;
+			public Student(int sn, String n)
 			{
+				studentNum = sn;
 				name = n;
-				oldGroups = o;
+				
 				
 			}
+
+			public int getStudentNum()
+				{
+					return studentNum;
+				}
+
+			public void setStudentNum(int studentNum)
+				{
+					this.studentNum = studentNum;
+				}
 
 			public String getName()
 				{
