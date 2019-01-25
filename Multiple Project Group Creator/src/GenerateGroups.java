@@ -45,7 +45,7 @@ public class GenerateGroups
 		public static void makeGroups() throws IOException
 			{
 				groupSize = namesList.size()/groupNum;
-				leftover = numOfStudents - (groupSize)
+				leftover = numOfStudents - (groupSize*groupNum);
 				System.out.println(groupSize);
 			
 			}
