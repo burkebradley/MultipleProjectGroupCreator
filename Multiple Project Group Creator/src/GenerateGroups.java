@@ -9,18 +9,13 @@ import com.sun.org.apache.xpath.internal.operations.Number;
 
 public class GenerateGroups
 	{
-		static ArrayList<Student>namesList = new ArrayList<Student>();
-		static ArrayList<String>group1 = new ArrayList<String>();
-		static ArrayList<String>group2 = new ArrayList<String>();
-		static ArrayList<String>group3 = new ArrayList<String>();
-		static ArrayList<String>group4 = new ArrayList<String>();
-		static ArrayList<String>group5 = new ArrayList<String>();
-		static ArrayList<String>group6 = new ArrayList<String>();
+		
 		static Scanner userInput1;
 		static int groupNum;
 		static int numOfStudents = 1;
 		static int groupSize;
 		static int leftover;
+	
 		
 		public static void makeNames() throws IOException
 			{
@@ -45,8 +40,16 @@ public class GenerateGroups
 		public static void makeGroups() throws IOException
 			{
 				groupSize = namesList.size()/groupNum;
-				leftover = numOfStudents - (groupSize*groupNum);
-				System.out.println(groupSize);
+				leftover = namesList.size()%groupNum;
+				System.out.println("There will be " + leftover  + " groups with " + (groupSize+1) + " students and " + (groupNum-leftover) + " groups with "  + (groupSize) + " students.");
+			
+			}
+		
+		public static void randomizeGroups() throws IOException
+			{
+				
+				if()
+			
 			
 			}
 		
