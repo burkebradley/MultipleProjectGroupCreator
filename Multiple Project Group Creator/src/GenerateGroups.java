@@ -9,13 +9,16 @@ import com.sun.org.apache.xpath.internal.operations.Number;
 
 public class GenerateGroups
 	{
-		
+		static ArrayList<Student>namesList = new ArrayList<Student>();
 		static Scanner userInput1;
 		static int groupNum;
 		static int numOfStudents = 1;
 		static int groupSize;
 		static int leftover;
-	
+		static int bigGroupSize;
+		static int numOfBigGroups;
+		static int smallGroupSize;
+		static int numOfSmallGroups;
 		
 		public static void makeNames() throws IOException
 			{
@@ -48,7 +51,7 @@ public class GenerateGroups
 		public static void randomizeGroups() throws IOException
 			{
 				
-				if()
+				
 			
 			
 			}
