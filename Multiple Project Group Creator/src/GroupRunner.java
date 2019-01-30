@@ -8,6 +8,8 @@ public class GroupRunner
 		{
 			GenerateGroups.makeNames();
 			GenerateGroups.numOfGroups();
+			GenerateGroups.randomizeGroups();
+		
 		}
 		
 
